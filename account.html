@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Kamran Mubarik" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>E-Commerce Online Shop</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">
+          <div class="logo">
+            <a href="index.html">
+              <div style="margin-top: 12px">
+                <img
+                  width="100px"
+                  height="90px"
+                  src="img/icons/e-commerce.png"
+                />
+              </div>
+              <div class="logo-text">
+                <p class="big-logo">LuJae</p>
+                <p class="big-logo">COMMERCE</p>
+                <!-- <p class="small-logo">Commerce</p> -->
+              </div>
+            </a>
+          </div>
+          <!-- logo -->
+          <div class="shop-icon">
+            <div class="dropdown">
+              <a href="account.html"><img src="img/icons/account.png" /></a>
+            </div>
+            <div class="dropdown">
+              <a href="orders.html"
+                ><img src="img/icons/shopping_cart.png"
+              /></a>
+            </div>
+          </div>
+          <!-- shop icons -->
+        </div>
+        <!-- brand -->
+
+        <div class="menu-bar">
+          <div class="menu">
+            <ul>
+              <li><a href="index.html">메인</a></li>
+              <li><a href="shop.html">상품</a></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <!-- menu -->
+      </div>
+      <!-- container -->
+    </header>
+    <!-- header -->
+
+    <div class="container">
+      <main>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="index.html">메인</a></li>
+            <li>/</li>
+            <li>계정</li>
+          </ul>
+        </div>
+        <!-- End of Breadcrumb-->
+
+        <div class="account-page">
+          <div class="profile">
+            <div class="profile-img">
+              <img src="img/icons/profile.jpg" />
+              <h2>이유재</h2>
+              <p>sejong@gmail.com</p>
+            </div>
+            <ul>
+              <li>
+                <a href="account.html" class="active">내 계정 <span>></span></a>
+              </li>
+              <li>
+                <a href="orders.html">내 구매목록 <span>></span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="account-detail">
+            <h2>계정</h2>
+            <div class="billing-detail">
+              <form class="checkout-form">
+                <div class="form-inline">
+                  <div class="form-group">
+                    <label>성</label>
+                    <input type="text" id="fname" name="fname" value="이" />
+                  </div>
+                  <div class="form-group">
+                    <label>이름</label>
+                    <input type="text" id="lname" name="lname" value="유재" />
+                  </div>
+                </div>
+                <div class="form-inline">
+                  <div class="form-group">
+                    <label>국가</label>
+                    <select id="country" name="country">
+                      <option selected>한국</option>
+                      <option value="american">미국</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>도시</label>
+                    <select id="city" name="city">
+                      <option selected>서울</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>주소</label>
+                  <textarea
+                    style="resize: none"
+                    id="address"
+                    name="address"
+                    rows="3"
+                  >
+서울특별시 광진구 능동로 209
+                  </textarea>
+                </div>
+                <div class="form-inline">
+                  <div class="form-group">
+                    <label>연락처</label>
+                    <input
+                      type="text"
+                      id="mobile"
+                      name="mobile"
+                      minlength="11"
+                      maxlength="11"
+                      value="02-3408-3114
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="btn-container">
+                  <button id="loadMore">수정하기</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Main Area -->
+    </div>
+
+    <footer>
+      <div class="inner">
+        <ul class="menu">
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+          <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+          <li><a href="javascript:void(0)">카드 이용약관</a></li>
+        </ul>
+
+        <div class="info">
+          <span>사업자등록번호 201-81-21515</span>
+          <span>(주)세종 커머스 대표이사 이유재</span>
+          <span>TEL : 02) 3211-1112 / FAX : 02) 3014-1306</span>
+          <span>개인정보 책임자 : JKL</span>
+        </div>
+
+        <p class="copyright">
+          &copy; <span class="this-year"></span> Sejong Commerce Company. All
+          Rights Reseved.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer Area -->
+  </body>
+</html>

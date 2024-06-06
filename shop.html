@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Kamran Mubarik" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>E-Commerce Online Shop</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="module" src="js/ShopPageProducts.js"></script>
+
+    <script>
+      $(function () {
+        $("#slider-range").slider({
+          range: true,
+          min: 0,
+          max: 10000,
+          values: [1000, 3000],
+          slide: function (event, ui) {
+            $("#amount").val("KRW." + ui.values[0] + " - KRW." + ui.values[1]);
+          },
+        });
+        $("#amount").val(
+          "KRW." +
+            $("#slider-range").slider("values", 0) +
+            " - KRW." +
+            $("#slider-range").slider("values", 1)
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">
+          <div class="logo">
+            <a href="index.html">
+              <div style="margin-top: 12px">
+                <img
+                  width="100px"
+                  height="90px"
+                  src="img/icons/e-commerce.png"
+                />
+              </div>
+              <div class="logo-text">
+                <p class="big-logo">SEJONG</p>
+                <p class="big-logo">COMMERCE</p>
+                <!-- <p class="small-logo">Commerce</p> -->
+              </div>
+            </a>
+          </div>
+          <!-- logo -->
+          <div class="shop-icon">
+            <div class="dropdown">
+              <a href="account.html"><img src="img/icons/account.png" /></a>
+            </div>
+            <div class="dropdown">
+              <a href="orders.html"
+                ><img src="img/icons/shopping_cart.png"
+              /></a>
+            </div>
+          </div>
+          <!-- shop icons -->
+        </div>
+        <!-- brand -->
+
+        <div class="menu-bar">
+          <div class="menu">
+            <ul>
+              <li><a href="index.html">메인</a></li>
+              <li><a href="shop.html">상품</a></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="search-bar">
+            <form onsubmit="searchProducts(); return false;">
+              <div class="form-group">
+                <input
+                  id="searchInput"
+                  type="text"
+                  class="form-control"
+                  name="search"
+                  placeholder="찾고 싶은 상품을 검색하세요!"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- menu -->
+      </div>
+      <!-- container -->
+    </header>
+    <!-- header -->
+
+    <div class="container">
+      <main>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="index.html">메인</a></li>
+            <li>/</li>
+            <li>상품</li>
+          </ul>
+        </div>
+        <!-- End of Breadcrumb-->
+        <div class="new-product-section shop">
+          <div id="product-all-content" class="product-content"></div>
+        </div>
+        <div class="btn-container">
+          <button id="loadMore">더보기</button>
+        </div>
+      </main>
+      <!-- Main Area -->
+    </div>
+
+    <footer>
+      <div class="inner">
+        <ul class="menu">
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+          <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+          <li><a href="javascript:void(0)">카드 이용약관</a></li>
+        </ul>
+
+        <div class="info">
+          <span>사업자등록번호 201-81-21515</span>
+          <span>(주)세종 커머스 대표이사 이유재</span>
+          <span>TEL : 02) 3211-1112 / FAX : 02) 3014-1306</span>
+          <span>개인정보 책임자 : JKL</span>
+        </div>
+
+        <p class="copyright">
+          &copy; <span class="this-year"></span> Sejong Commerce Company. All
+          Rights Reseved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
